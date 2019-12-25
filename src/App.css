@@ -1,0 +1,26 @@
+.App{
+    text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.list {
+  width: 500px;
+  text-align: left;
+}
+
+input{
+  width: 500px;
+  flex:1;
+  margin-left: 16px;
+  height: 50px;
+  font-size: 20px;
+
+}
+
+input::placeholder{
+  font-size: 20px;
+}
