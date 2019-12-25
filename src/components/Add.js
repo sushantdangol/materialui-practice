@@ -44,8 +44,8 @@ const StyledButton = withStyles({
 // )(Input);
 
 export default class Add extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       def: {
         defaults: [
@@ -73,6 +73,9 @@ export default class Add extends React.Component {
         }
       }
     }
+
+    this.deleteItems = this.deleteItems.bind(this)
+
   }
 
   showDefault() {

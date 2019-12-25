@@ -35,13 +35,20 @@ const IconStyled = withStyles({
 
 export default class List extends React.Component {
 
-  listItem(item) {
-    return <StyledButton> {item} <IconStyled onClick={() => this.removeItem(item)}><CancelIcon /></IconStyled> </StyledButton>
+  constructor(props) {
+    super(props)
+
   }
 
   removeItem(value){
+    console.log(value)
     this.props.delete(value)
   }
+
+  listItem(item) {
+    return <StyledButton> {item} <IconStyled><CancelIcon onClick={() => this.removeItem(item)} /></IconStyled> </StyledButton>
+  }
+
 
   render() {
     var itemEntries = this.props.entries;
